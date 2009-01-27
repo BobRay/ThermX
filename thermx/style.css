@@ -1,0 +1,64 @@
+.thermx-progress {
+
+	width: 200px;
+	height: 500px;
+	background-image: url(progress.jpg);
+
+
+}
+.thermx-progress-burst {
+    width: 200px;
+    height: 500px;
+    background-image: url(progress-burst.jpg);
+}
+
+.thermx-progressgraphics {
+	width: 13px;
+	padding: 48px 0px 0px 42px;
+	float: left;
+
+}
+.thermx-progressmercury {
+    position:absolute;
+	background-image: url(mercury.jpg);
+    background-repeat: repeat-y;
+    margin-bottom:0px;
+    padding-bottom:0px;
+
+}
+.thermx-progressmercurytop {
+	background-image: url(mercury-top.jpg);
+	width: 13px;
+	height: 7px;
+
+}
+.thermx-progressnumbers {
+	float: right;
+	margin: 25px 10px 0px 0px;
+	font-size: 10px;
+	color: #123456;
+	text-align: right;
+	width: 100px;
+    line-height:14px;
+
+
+}
+.thermx-progressvalue {
+	border-top: solid 1px #cccccc;
+	margin: 25px 0px 0px 0px;
+
+}
+
+.percent00 {margin-top: 395px; height: 0px;}
+.percent10 {margin-top: 360px; height: 40px;}
+.percent20 {margin-top: 320px; height: 80px;}
+.percent30 {margin-top: 280px; height: 120px;}
+.percent40 {margin-top: 240px; height: 160px;}
+.percent50 {margin-top: 200px; height: 200px;}
+.percent60 {margin-top: 160px; height: 240px;}
+.percent70 {margin-top: 120px; height: 280px;}
+.percent80 {margin-top: 80px; height: 320px;}
+.percent90 {margin-top: 40px; height: 360px;}
+.percent100 {margin-top: 0px; height: 400px;}
+
+.percent {margin-top: xmtpx; height: xhtpx;}
