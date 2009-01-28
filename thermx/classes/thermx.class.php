@@ -49,10 +49,11 @@
      * @param array $modx MODx object.
      * @param int $prog current funds raised.
      * @param int $max Fundraising goal.
-     * @param string $format string to be passes to money_format()
+     * @param string $format string to be passed to money_format()
+     * @param string $locale string to be passed to setlocale()
      */
       function thermx($modx, $prog, $max, $format = '%(#10n', $locale = 'en_US') {
-          $this->__construct($modx, $prog,$max, $format);
+          $this->__construct($modx, $prog,$max, $format. $locale);
       }
 
     /**
@@ -61,7 +62,7 @@
      * @param array $modx MODx object.
      * @param int $prog current funds raised.
      * @param int $max Fundraising goal.
-     * @param string $format string to be passes to money_format()
+     * @param string $format string to be passed to money_format()
      */
       function __construct($modx, $prog, $max, $format = '%(#10n' , $locale = 'en_US') {
           $this->thermxProgress = $prog;
