@@ -58,15 +58,18 @@ require $src;
 $thermxConfig = $scriptProperties;
 
 $thermxProgress = isset($thermxConfig['thermxProgress']) ? $thermxConfig['thermxProgress'] : 0;
+
 $thermxMax = isset($thermxConfig['thermxMax']) ? $thermxConfig['thermxMax'] : 12000;
 
 /* avoid division by zero */
 $thermxMax = $thermxMax = 0 ? 1 : $thermxMax;
 
 $thermxFormat = isset($thermxConfig['thermxFormat']) ? $thermxConfig['thermxFormat'] : '%(#10n';
+
 $thermxLocale = isset($thermxConfig['thermxLocale']) ? $thermxConfig['thermxLocale'] : 'en_US';
 
-$therm = new thermx($modx,$thermxProgress, $thermxMax, $thermxFormat, $thermxLocale);
+$therm = new thermx($modx,$thermxProgress,
+    $thermxMax, $thermxFormat, $thermxLocale);
 
 $cur = $thermxProgress;
 $max = $thermxMax;
@@ -89,15 +92,18 @@ $modx->regClientCSS($src);
 
 /* inject css for mercury */
 $src = '<style type="text/css">
-  .percent {margin-top: ' . $mt . 'px; height:' . $ht . 'px;}
+  .percent {margin-top: ' .
+    $mt . 'px; height:' . $ht . 'px;}
 </style>';
 $modx->regClientCSS($src);
 
 /* current amount raised placeholder */
-$modx->setPlaceholder('thermx_progress', $therm->showProgress());
+$modx->setPlaceholder('thermx_progress',
+    $therm->showProgress());
 
 /* thermometer graphic placeholder */
-$modx->setPlaceholder('thermx_thermometer', $therm->showThermometer());
+$modx->setPlaceholder('thermx_thermometer',
+    $therm->showThermometer());
 
 return;
 ?>
