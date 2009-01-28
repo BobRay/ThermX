@@ -3,7 +3,7 @@
  @package thermx
  @author: Bob Ray
  @created: 01/15/2009
- @version 1.0.0
+ @version 3.0.1
  Adapted from a Wordpress Plugin by Christopher Ross
  Original Plugin URI: http://thisismyurl.com
  Compatibility: MODx Revolution
