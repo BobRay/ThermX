@@ -27,10 +27,10 @@ Parameters:
  Placeholders:
  =============
 
- [+thermx_progress+]    -- Put this where you want the
+ [[+thermx_progress]]    -- Put this where you want the
                            current amount raised to appear.
 
- [+thermx_thermometer+] -- Put this where you want the
+ [[+thermx_thermometer]] -- Put this where you want the
                            thermometer to appear.
 
  Example Page Content:
@@ -38,8 +38,8 @@ Parameters:
 
  [[ThermX? &thermxProgress=`2500` &thermxMax=`7500`]]
 
- <p>Our progress so far: [+thermx_progress+]</p>
+ <p>Our progress so far: [[+thermx_progress]]</p>
 
 
- [+thermx_thermometer+]
+ [[+thermx_thermometer]]
 
