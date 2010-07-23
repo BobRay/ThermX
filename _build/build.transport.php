@@ -198,8 +198,8 @@ $builder->setPackageAttributes(array(
         'readme.txt'),
     'license' => file_get_contents($sources['docs'] .
         'license.txt'),
-    'setup-options' => array('source' => file_get_contents($sources['build'].
-        'user_input.html'),
+    'setup-options' => array('source' => $sources['build'].
+        'user_input.html',
         ),
 ));
 

@@ -1,6 +1,19 @@
-<p>&nbsp;</p>
+<?php
+/**
+ * @package spform
+ * @subpackage build
+ */
 
-<input type="checkbox" name="install_sample" id="install_sample" value = "Yes" align="left" >&nbsp;&nbsp;
-<label for = "install_sample">Install Sample Thermometer Page (recommended).</label>
-<p>&nbsp;</p>
-<p><b>Check the box to install a sample Thermometer page that you can easily edit to suit your needs.</b></p>
+switch ($options[XPDO_TRANSPORT_PACKAGE_ACTION]) {
+    case XPDO_TRANSPORT_ACTION_INSTALL: break;
+    case XPDO_TRANSPORT_ACTION_UPGRADE: break;
+    case XPDO_TRANSPORT_ACTION_UNINSTALL: break;
+}
+
+$output = '<p>&nbsp;</p>';
+
+$output .= '<input type="checkbox" name="install_sample" id="install_sample" value = "Yes" align="left" >&nbsp;&nbsp';
+$output .='<label for = "install_sample">Install Sample Thermometer Page (recommended).</label>
+<p>&nbsp;</p>';
+$output .='<p><b>Check the box to install a sample Thermometer page that you can easily edit to suit your needs.</b></p>';
+return $output;
