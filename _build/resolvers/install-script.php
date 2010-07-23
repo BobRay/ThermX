@@ -6,9 +6,9 @@
  * @subpackage build
  */
 $success = false;
-switch($options[XPDO_TRANSPORT_PACKAGE_ACTION]) {
+switch($options[xPDOTransport::PACKAGE_ACTION]) {
 
-    case XPDO_TRANSPORT_ACTION_INSTALL:
+    case xPDOTransport::ACTION_INSTALL:
         /* Create Sample Thermometer Page resource if user wants it */
         if (isset($options['install_sample']) && $options['install_sample'] == 'Yes' ) {
 
@@ -16,7 +16,7 @@ switch($options[XPDO_TRANSPORT_PACKAGE_ACTION]) {
 
 
             $default_template = $object->xpdo->config['default_template'];
-            $object->xpdo->log(XPDO_LOG_LEVEL_INFO,"Creating resource: Sample Thermometer Page<br />");
+            $object->xpdo->log(xPDO::LOG_LEVEL_INFO,"Creating resource: Sample Thermometer Page<br />");
             $r = $object->xpdo->newObject('modResource');
             $r->set('class_key','modDocument');
             $r->set('context_key','web');
@@ -43,11 +43,11 @@ switch($options[XPDO_TRANSPORT_PACKAGE_ACTION]) {
         }
               $success =  true;
             break;
-        case XPDO_TRANSPORT_ACTION_UPGRADE:
+        case xPDOTransport::ACTION_UPGRADE:
             $success = true;
             break;
-        case XPDO_TRANSPORT_ACTION_UNINSTALL:
-            $object->xpdo->log(XPDO_LOG_LEVEL_INFO,"<br /><b>NOTE: You will have to remove the Sample Thermometer Resource manually</b><br />");
+        case xPDOTransport::ACTION_UNINSTALL:
+            $object->xpdo->log(xPDO::LOG_LEVEL_WARN,"<br /><b>NOTE: You will have to remove the Sample Thermometer Resource manually</b><br />");
             $success = true;
             break;
 

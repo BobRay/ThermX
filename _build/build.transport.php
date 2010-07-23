@@ -2,9 +2,9 @@
 /**
  * ThermX Build Script
  *
- * @name SPform
- * @version 3.0.1
- * @release beta
+ * @name ThermX
+ * @version 3.0.2
+ * @release beta1
  * @author BobRay <bobray@softville.com>
  */
 global $modx;
@@ -28,8 +28,8 @@ $sources= array (
 unset($root);
 
 $package_name = 'thermx';
-$package_version = '3.0.1';
-$package_release = 'beta';
+$package_version = '3.0.2';
+$package_release = 'beta1';
 
 $packageNamespace = 'thermx';
 
@@ -49,7 +49,7 @@ $objectArray = array (
 
         'name' => 'ThermX',
 
-        'description' => 'ThermX-3.0.1-beta - '.
+        'description' => 'ThermX-3.0.2-beta1 - '.
             'Creates a Fundraising ' .
             'thermometer for your site',
 
@@ -76,11 +76,11 @@ require_once MODX_CORE_PATH . 'model/modx/modx.class.php';
 $modx= new modX();
 $modx->initialize('mgr');
 echo '<pre>'; /* used for nice formatting for log messages  */
-$modx->setLogLevel(MODX_LOG_LEVEL_INFO);
+$modx->setLogLevel(modX::LOG_LEVEL_INFO);
 $modx->setLogTarget('ECHO');
     /* $modx->setDebug(true); */
 
-$modx->loadClass('transport.modPackageBuilder','',false, true);
+$modx->loadClass('transport.modPackageBuilder','',false, true,'{core_path}components/'.$packageNamespace.'/');
 $builder = new modPackageBuilder($modx);
 $builder->createPackage($package_name,$package_version,$package_release);
 $builder->registerNamespace($packageNamespace,false,true);
@@ -90,11 +90,11 @@ $builder->registerNamespace($packageNamespace,false,true);
 foreach($objectArray as $object) {
 
     if (!file_exists($object['source_file'])) {
-        $modx->log(MODX_LOG_LEVEL_FATAL,
+        $modx->log(modX::LOG_LEVEL_FATAL,
             '<b>Error</b> - Element source file not'
             . ' found: '.$object['source_file'].'<br />');
     }
-    $modx->log(MODX_LOG_LEVEL_INFO,
+    $modx->log(modX::LOG_LEVEL_INFO,
             'Creating element from source file: ' .
             $object['source_file'].'<br />');
 
@@ -119,7 +119,7 @@ foreach($objectArray as $object) {
     $c->setContent(file_get_contents($object['source_file']));
 
     if($object['props_file'] != '') {
-        $modx->log(MODX_LOG_LEVEL_INFO,
+        $modx->log(modX::LOG_LEVEL_INFO,
             'Retrieving properties from source file: ' .
             $object['props_file'].'<br />');
 
@@ -131,31 +131,31 @@ foreach($objectArray as $object) {
 
    /* create a transport vehicle for the data object */
     $attributes= array(
-        XPDO_TRANSPORT_UNIQUE_KEY => 'name',
-    XPDO_TRANSPORT_PRESERVE_KEYS => false,
-    XPDO_TRANSPORT_UPDATE_OBJECT => true
+        xPDOTransport::UNIQUE_KEY => 'name',
+    xPDOTransport::PRESERVE_KEYS => false,
+    xPDOTransport::UPDATE_OBJECT => true
 
     );
     $vehicle = $builder->createVehicle($c, $attributes);
 
     if ($object['resolver_source'] != '') {
-        $modx->log(MODX_LOG_LEVEL_INFO,
+        $modx->log(modX::LOG_LEVEL_INFO,
             "Creating Resolver<br />");
 
         if ($object['resolver_type'] == 'file'
          && !is_dir($object['resolver_source'])) {
-            $modx->log(MODX_LOG_LEVEL_FATAL,
+            $modx->log(modX::LOG_LEVEL_FATAL,
                     '<b>Error</b> - Resolver source '
                     . 'directory not found: '.
                     $object['resolver_source']
                     . '<br />');
         }
 
-        $modx->log(MODX_LOG_LEVEL_INFO,
+        $modx->log(modX::LOG_LEVEL_INFO,
             'Source: '.$object['resolver_source']
             . '<br />');
 
-        $modx->log(MODX_LOG_LEVEL_INFO,
+        $modx->log(modX::LOG_LEVEL_INFO,
             'Target: '.$object['resolver_target']
             . '<br /><br />');
 
@@ -198,8 +198,9 @@ $builder->setPackageAttributes(array(
         'readme.txt'),
     'license' => file_get_contents($sources['docs'] .
         'license.txt'),
-    'setup-options' => file_get_contents($sources['build'].
-        'user_input.html')
+    'setup-options' => array('source' => file_get_contents($sources['build'].
+        'user_input.html'),
+        ),
 ));
 
 
@@ -213,7 +214,7 @@ $tend= $mtime;
 $totalTime= ($tend - $tstart);
 $totalTime= sprintf("%2.4f s", $totalTime);
 
-$modx->log(MODX_LOG_LEVEL_INFO,'Package completed.
+$modx->log(modX::LOG_LEVEL_INFO,'Package completed.
         <br />Execution time: '
         . $totalTime . '<br />');
 
