@@ -1,0 +1,13 @@
+Changelog for ThermX
+
+ThermX 3.0.3
+-------------------
+ - Added Changelog
+ - Reorganized for Git
+ - Updated for MODx 2.0.6
+
+
+ThermX 3.0.2
+-----------------
+
+- Initial release

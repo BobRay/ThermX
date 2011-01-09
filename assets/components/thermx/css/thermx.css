@@ -2,14 +2,14 @@
 
 	width: 200px;
 	height: 500px;
-	background-image: url(progress.jpg);
+	background-image: url(../images/progress.jpg);
 
 
 }
 .thermx-progress-burst {
     width: 200px;
     height: 500px;
-    background-image: url(progress-burst.jpg);
+    background-image: url(../images/progress-burst.jpg);
 }
 
 .thermx-progressgraphics {
@@ -20,14 +20,14 @@
 }
 .thermx-progressmercury {
     position:absolute;
-	background-image: url(mercury.jpg);
+	background-image: url(../images/mercury.jpg);
     background-repeat: repeat-y;
     margin-bottom:0px;
     padding-bottom:0px;
 
 }
 .thermx-progressmercurytop {
-	background-image: url(mercury-top.jpg);
+	background-image: url(../images/mercury-top.jpg);
 	width: 13px;
 	height: 7px;
 

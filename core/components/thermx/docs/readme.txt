@@ -1,8 +1,12 @@
-ThermX Fundraising Snippet
+ThermX Fundraising Thermometer Snippet
 ==========================
-Author: BobRay <bobray@softville.com>
+Author: BobRay <http://bobsguides.com>
 Date:   01/10/2009
 ====================
+
+Tutorial: http://bobsguides.com/thermx-tutorial.html
+Bugs and Requests: https://github.com/BobRay/ThermX/issues
+Styling: assets/components/thermx/css/thermx.css
 
 This snippet displays a fundraising thermometer and a
 text display of the amount raised so far.

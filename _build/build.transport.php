@@ -56,10 +56,10 @@ $objectArray = array (
             'thermometer for your site',
 
         'type' => 'snippet',
-        'source_file' => $sources['thermx'] . 'thermx.php',
+        'source_file' => $sources['thermx'] . 'snippet.thermx.php',
 
         'props_file' => $sources['data'] .
-            'thermxprops.php',
+            'properties.thermx.php',
 
         'resolver_type' => 'file',
 
