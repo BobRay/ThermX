@@ -15,7 +15,9 @@ $mtime = $mtime[1] + $mtime[0];
 $tstart = $mtime;
 set_time_limit(0);
 
-$root = dirname(dirname(__FILE__)).'/';
+$root = (dirname(dirname(__FILE__))).'/';
+$core = dirname(dirname(dirname(dirname(dirname(__FILE__))))).'/core/';
+require_once($core . 'config/config.inc.php');
 $sources= array (
     'root' => $root,
     'thermx' => $root . 'thermx/',
@@ -83,7 +85,7 @@ $modx->setLogTarget('ECHO');
 $modx->loadClass('transport.modPackageBuilder','',false, true,'{core_path}components/'.$packageNamespace.'/');
 $builder = new modPackageBuilder($modx);
 $builder->createPackage($package_name,$package_version,$package_release);
-$builder->registerNamespace($packageNamespace,false,true);
+$builder->registerNamespace($packageNamespace,false,true,'{core_path}components/'.$packageNamespace . '/');
 
 /* loop to create snippets, and chunks  */
 
