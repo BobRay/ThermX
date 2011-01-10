@@ -51,9 +51,10 @@
 */
 
 
-
-$src = $modx->config['core_path'] . 'components/thermx/classes/thermx.class.php';
-require $src;
+require_once $modx->getOption('tx.core_path', null, $modx->getOption('core_path') . 'components/thermx/') . 'classes/thermx.class.php';
+$cssUrl = $modx->getOption('tx.assets_url', null, $modx->getOption('assets_path') . 'components/thermx/') . 'css/thermx.css';
+//$src = MODX_CORE_PATH . 'components/thermx/classes/thermx.class.php';
+//require $src;
 
 $thermxConfig = $scriptProperties;
 
@@ -87,8 +88,8 @@ $ht = round($percent * $tHeight);
 $mt = round($tHeight - $ht);
 
 /* inject basis css from file */
-$src = $modx->config['assets_url'] . 'components/thermx/css.thermx.css';
-$modx->regClientCSS($src);
+//$src = MODX_ASSETS_URL . 'components/thermx/css/thermx.css';
+$modx->regClientCSS($cssUrl);
 
 /* inject css for mercury */
 $src = '<style type="text/css">
