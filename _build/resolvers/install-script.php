@@ -12,7 +12,7 @@ switch($options[xPDOTransport::PACKAGE_ACTION]) {
         /* Create Sample Thermometer Page resource if user wants it */
         if (isset($options['install_sample']) && $options['install_sample'] == 'Yes' ) {
 
-            $txt = file_get_contents($object->xpdo->config['base_path'] . 'components/thermx/docs/samplepage.html');
+            $txt = file_get_contents($object->xpdo->config['core_path'] . 'components/thermx/docs/samplepage.html');
 
 
             $default_template = $object->xpdo->config['default_template'];
