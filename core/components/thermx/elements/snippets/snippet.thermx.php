@@ -106,5 +106,5 @@ $modx->setPlaceholder('thermx_progress',
 $modx->setPlaceholder('thermx_thermometer',
     $therm->showThermometer());
 
-return;
+return'';
 ?>

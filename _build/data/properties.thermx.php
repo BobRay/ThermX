@@ -33,3 +33,5 @@ $properties = array (
                     )
 
 );
+
+return $properties;

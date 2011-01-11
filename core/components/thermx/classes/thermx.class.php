@@ -52,9 +52,9 @@
      * @param string $format string to be passed to money_format()
      * @param string $locale string to be passed to setlocale()
      */
-      function thermx($modx, $prog, $max, $format = '%(#10n', $locale = 'en_US') {
+     /* function thermx($modx, $prog, $max, $format = '%(#10n', $locale = 'en_US') {
           $this->__construct($modx, $prog,$max, $format. $locale);
-      }
+      }*/
 
     /**
      * PHP5 Constructor
@@ -148,11 +148,11 @@ function showThermometer() {
 function roundnum ($num, $nearest)
 {
    $ret = 0;
-   $mod = $num % $nearest;
-   if ($mod >= 0)
-     $ret = ( $mod > ( $nearest / 2)) ? $num + ( $nearest - $mod) : $num - $mod;
+   $txmod = $num % $nearest;
+   if ($txmod >= 0)
+     $ret = ( $txmod > ( $nearest / 2)) ? $num + ( $nearest - $txmod) : $num - $txmod;
     else
-     $ret = ( $mod > (-$nearest / 2)) ? $num - $mod : $num + ( -$nearest - $mod);
+     $ret = ( $txmod > (-$nearest / 2)) ? $num - $txmod : $num + ( -$nearest - $txmod);
     return $ret;
 }
 
