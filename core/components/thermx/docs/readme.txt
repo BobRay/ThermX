@@ -14,7 +14,7 @@ text display of the amount raised so far.
 Minimal Snippet Call:
 =====================
 
- [[ThermX? &thermxProgress=`2500` &thermxMax=`7500`]]
+ [[!ThermX? &thermxProgress=`2500` &thermxMax=`7500`]]
 
 Parameters:
 ===========
