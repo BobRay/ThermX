@@ -3,9 +3,12 @@
  * ThermX Build Script
  *
  * @name ThermX
- * @version 3.0.2
+ * @version 3.0.3
  * @release beta1
- * @author BobRay <bobray@softville.com>
+ * @author BobRay <http://bobsguides.com>
+ *
+ * @package thermx
+ * @subpackage build
  */
 global $modx;
 

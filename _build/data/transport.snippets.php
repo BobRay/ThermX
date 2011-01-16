@@ -1,5 +1,8 @@
 <?php
 /**
+ * Array of snippet objects for ThermX package
+ * @author Bob Ray
+ * 1/15/11
  * @package thermx
  * @subpackage build
  */

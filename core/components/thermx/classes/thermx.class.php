@@ -1,10 +1,37 @@
 <?php
 /**
-@package thermx
- @author: Bob Ray
- @created: 01/15/2009
- @version 3.0.2
- Adapted from a Wordpress Plugin by Christopher Ross
+ * ThermX Class
+ * @version 3.0.3
+ *
+ * Copyright 2011 Bob Ray
+ *
+ * @author Bob Ray <http://bobsguides.com>
+ * 1/15/11
+ *
+ * ThermX is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the Free
+ * Software Foundation; either version 2 of the License, or (at your option) any
+ * later version.
+ *
+ * ThermX is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+ * A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * ThermX; if not, write to the Free Software Foundation, Inc., 59 Temple
+ * Place, Suite 330, Boston, MA 02111-1307 USA
+ *
+ * @package thermx
+ */
+/**
+ * MODx ThermX Class
+ *
+ * Description Class file for ThermX package
+ * @package thermx
+ */
+
+/*
+ Adapted from a WordPress Plugin by Christopher Ross
  Original Plugin URI: http://thisismyurl.com
  Compatibility: MODx Revolution
 
@@ -43,18 +70,6 @@
      */
    var $thermxLocale;
 
-    /**
-     * PHP4 Constructor
-     * @access public
-     * @param array $modx MODx object.
-     * @param int $prog current funds raised.
-     * @param int $max Fundraising goal.
-     * @param string $format string to be passed to money_format()
-     * @param string $locale string to be passed to setlocale()
-     */
-     /* function thermx($modx, $prog, $max, $format = '%(#10n', $locale = 'en_US') {
-          $this->__construct($modx, $prog,$max, $format. $locale);
-      }*/
 
     /**
      * PHP5 Constructor

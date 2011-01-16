@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * Default properties for the ThermX package
+ * @author Bob Ray
+ * 1/15/11
+ *
+ * @package thermx
+ * @subpackage build
+ */
+
+
 $properties = array (
    array (
                         'name'=>'thermxProgress',
