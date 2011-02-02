@@ -3,7 +3,7 @@
  * ThermX Build Script
  *
  * @name ThermX
- * @version 3.0.3
+ * @version 3.0.4
  * @release beta1
  * @author BobRay <http://bobsguides.com>
  *
@@ -33,7 +33,7 @@ $sources= array (
 unset($root);
 
 $package_name = 'thermx';
-$package_version = '3.0.3';
+$package_version = '3.0.4';
 $package_release = 'beta1';
 
 $packageNamespace = 'thermx';

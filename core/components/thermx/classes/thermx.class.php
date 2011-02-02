@@ -1,7 +1,7 @@
 <?php
 /**
  * ThermX Class
- * @version 3.0.3
+ * @version 3.0.4
  *
  * Copyright 2011 Bob Ray
  *

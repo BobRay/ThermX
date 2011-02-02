@@ -1,5 +1,10 @@
 Changelog for ThermX
 
+ThermX 3.0.4
+------------
+ - Fixed bug in transport package
+ - Added tutorial to docs
+
 ThermX 3.0.3
 -------------------
  - Added Changelog
