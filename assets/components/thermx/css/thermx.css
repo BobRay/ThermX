@@ -2,14 +2,14 @@
 
 	width: 200px;
 	height: 500px;
-	background-image: url(../images/progress.jpg);
+	background-image: url(../images/progress.png);
 
 
 }
 .thermx-progress-burst {
     width: 200px;
     height: 500px;
-    background-image: url(../images/progress-burst.jpg);
+    background-image: url(../images/progress-burst.png);
 }
 
 .thermx-progressgraphics {
