@@ -3,7 +3,7 @@
  @package thermx
  @author: Bob Ray
  @created: 01/15/2009
- @version 3.0.2
+ @version 3.1.0
  * /
  * 
  /*

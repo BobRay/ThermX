@@ -1,12 +1,12 @@
 <?php
 /**
  * ThermX Class
- * @version 3.0.4
+ * @version 3.1.0
  *
  * Copyright 2011 Bob Ray
  *
  * @author Bob Ray <http://bobsguides.com>
- * 1/15/11
+ * 5/11/11
  *
  * ThermX is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the Free
