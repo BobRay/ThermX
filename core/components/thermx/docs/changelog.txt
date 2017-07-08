@@ -14,7 +14,7 @@ ThermX 3.0.3
  - Added Changelog
  - PhpDoc comments
  - Reorganized for Git
- - Updated for MODx 2.0.6
+ - Updated for MODX 2.0.6
 
 
 ThermX 3.0.2

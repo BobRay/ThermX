@@ -5,7 +5,7 @@
  * @name ThermX
  * @version 3.0.4
  * @release beta1
- * @author BobRay <http://bobsguides.com>
+ * @author BobRay <https://bobsguides.com>
  *
  * @package thermx
  * @subpackage build

@@ -2,6 +2,7 @@
 /** This Class displays a fundraising thermometer
  @package thermx
  @author: Bob Ray
+ @Copyright 2009-2017 Bob Ray
  @created: 01/15/2009
  @version 3.1.0
  * /
@@ -9,7 +10,7 @@
  /*
  Adapted from a WordPress Plugin by Christopher Ross
  Original Plugin URI: http://thisismyurl.com
- Compatibility: MODx Revolution
+ Compatibility: MODX Revolution
 
  Usage
  -----

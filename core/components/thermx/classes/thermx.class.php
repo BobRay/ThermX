@@ -3,9 +3,9 @@
  * ThermX Class
  * @version 3.1.0
  *
- * Copyright 2011 Bob Ray
+ * Copyright 2011-2017 Bob Ray
  *
- * @author Bob Ray <http://bobsguides.com>
+ * @author Bob Ray <https://bobsguides.com>
  * 5/11/11
  *
  * ThermX is free software; you can redistribute it and/or modify it
@@ -24,7 +24,7 @@
  * @package thermx
  */
 /**
- * MODx ThermX Class
+ * MODX ThermX Class
  *
  * Description Class file for ThermX package
  * @package thermx
@@ -33,13 +33,13 @@
 /*
  Adapted from a WordPress Plugin by Christopher Ross
  Original Plugin URI: http://thisismyurl.com
- Compatibility: MODx Revolution
+ Compatibility: MODX Revolution
 
 */
   class thermx {
 
     /**
-     * @var array MODx instance passed in the constructor.
+     * @var array MODX instance passed in the constructor.
      * @access protected
      */
     var $modx;
@@ -74,7 +74,7 @@
     /**
      * PHP5 Constructor
      * @access public
-     * @param array $modx MODx object.
+     * @param array $modx MODX object.
      * @param int $prog current funds raised.
      * @param int $max Fundraising goal.
      * @param string $format string to be passed to money_format()
