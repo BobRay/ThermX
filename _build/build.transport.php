@@ -10,7 +10,6 @@
  * @package thermx
  * @subpackage build
  */
-global $modx;
 
 $mtime = microtime();
 $mtime = explode(" ", $mtime);
@@ -116,18 +115,7 @@ $builder->setPackageAttributes(array(
     'license' => file_get_contents($sources['source_core'] . '/docs/license.txt'),
     'readme' => file_get_contents($sources['source_core'] . '/docs/readme.txt'),
     'changelog' => file_get_contents($sources['source_core'] . '/docs/changelog.txt'),
-    'setup-options' => array('source' => $sources['build'].
-            'user_input.html',)
 ));
-
-
-
-
-
-
-//$builder->putVehicle($vehicle);
-
-
 
 /* done building package */
 
