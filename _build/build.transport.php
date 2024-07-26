@@ -131,21 +131,6 @@ $builder->setPackageAttributes(array(
 
 /* done building package */
 
-if (false) { /* now pack in the license file,
- * readme and setup options */
-
-    $builder->setPackageAttributes(array(
-        'readme' => file_get_contents($sources['docs'] .
-            'readme.txt'),
-        'license' => file_get_contents($sources['docs'] .
-            'license.txt'),
-        'setup-options' => array('source' => $sources['build'].
-            'user_input.html',
-            ),
-    ));
-}
-
-
 /* zip up the package  */
 $builder->pack();
 
