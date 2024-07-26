@@ -56,8 +56,7 @@ $prefix = $modx->getVersionData()['version'] >= 3
 switch($options[xPDOTransport::PACKAGE_ACTION]) {
 
     case xPDOTransport::ACTION_INSTALL:
-        /* Create Sample Thermometer Page resource if user wants it */
-        if (isset($options['install_sample']) && $options['install_sample'] == 'Yes' ) {
+        /* Create Sample Thermometer Page */
 
         $txt = file_get_contents($modx->config['core_path'] . 'components/thermx/docs/samplepage.html');
 
@@ -100,6 +99,29 @@ switch($options[xPDOTransport::PACKAGE_ACTION]) {
         $default_template = $modx->config['default_template'];
         $modx->log(xPDO::LOG_LEVEL_INFO,"Creating resource: Sample Thermometer Page<br />");
         $r = $modx->newObject($prefix . 'modResource');
+        $default_template = $modx->config['default_template'];
+        $modx->log(xPDO::LOG_LEVEL_INFO,"Creating resource: Sample Thermometer Page<br />");
+        $r = $modx->newObject($prefix . 'modResource');
+        $r->set('contentType','text/html');
+        $r->set('pagetitle','Sample Thermometer');
+        $r->set('longtitle','Sample Thermometer Page');
+        $r->set('description','Sample Thermometer Page');
+        $r->set('alias','thermometer');
+        $r->set('published','1');
+        $r->set('parent','0');
+        $r->setContent($txt);
+        $r->set('richtext','0');
+        $r->set('menuindex','1');
+        $r->set('searchable','0');
+        $r->set('cacheable','1');
+        $r->set('menutitle','Thermometer');
+        $r->set('donthit','0');
+        $r->set('hidemenu','0');
+        $r->set('template',$default_template);
+        $r->save();
+
+        $success =  true;
+        break;
 
 }
 return $success;
