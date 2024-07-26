@@ -6,7 +6,7 @@
  @created: 01/15/2009
  @version 3.1.0
  * /
- * 
+ *
  /*
  Adapted from a WordPress Plugin by Christopher Ross
  Original Plugin URI: http://thisismyurl.com
@@ -97,4 +97,3 @@ $modx->setPlaceholder('thermx_thermometer',
     $therm->showThermometer());
 
 return'';
-?>

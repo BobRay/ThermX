@@ -172,4 +172,3 @@ function roundnum ($num, $nearest)
 }
 
 } /* end of class thermx */
-?>
