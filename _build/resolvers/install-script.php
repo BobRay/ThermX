@@ -33,6 +33,22 @@
  * @subpackage build
  */
 $success = false;
+
+
+/* @var modTransportPackage $transport */
+/* @var modX $modx */
+/* @var modX $object */
+/* @var $options array */
+
+
+/* @var modTransportPackage $transport */
+
+if ($transport) {
+    $modx =& $transport->xpdo;
+} else {
+    $modx =& $object->xpdo;
+}
+
 $prefix = $modx->getVersionData()['version'] >= 3
     ? 'MODX\Revolution\\'
     : '';
@@ -43,7 +59,7 @@ switch($options[xPDOTransport::PACKAGE_ACTION]) {
         /* Create Sample Thermometer Page resource if user wants it */
         if (isset($options['install_sample']) && $options['install_sample'] == 'Yes' ) {
 
-            $txt = file_get_contents($object->xpdo->config['core_path'] . 'components/thermx/docs/samplepage.html');
+        $txt = file_get_contents($modx->config['core_path'] . 'components/thermx/docs/samplepage.html');
 
 
             $default_template = $object->xpdo->config['default_template'];
@@ -81,6 +97,9 @@ switch($options[xPDOTransport::PACKAGE_ACTION]) {
             $object->xpdo->log(xPDO::LOG_LEVEL_WARN,"<br /><b>NOTE: You will have to remove the Sample Thermometer Resource manually</b><br />");
             $success = true;
             break;
+        $default_template = $modx->config['default_template'];
+        $modx->log(xPDO::LOG_LEVEL_INFO,"Creating resource: Sample Thermometer Page<br />");
+        $r = $modx->newObject($prefix . 'modResource');
 
 }
 return $success;
