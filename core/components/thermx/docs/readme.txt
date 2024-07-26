@@ -1,7 +1,7 @@
 ThermX Fundraising Thermometer Snippet
 ==========================
 Author: BobRay <https://bobsguides.com>
-Copyright 2009-2017 Bob Ray
+Copyright 2009-2024 Bob Ray
 Created on:   01/10/2009
 ====================
 
@@ -47,4 +47,3 @@ Parameters:
 
 
  [[+thermx_thermometer]]
-

@@ -2,7 +2,7 @@
 /**
  * ThermX package install resolver script
  *
- * Copyright 2011-2017 Bob Ray
+ * Copyright 2011-2024 Bob Ray
  * @author Bob Ray <https://bobsguides.com>
  * 1/15/11
  *

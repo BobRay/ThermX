@@ -1,9 +1,8 @@
 <?php
 /**
  * ThermX Class
- * @version 3.1.0
  *
- * Copyright 2011-2017 Bob Ray
+ * Copyright 2011-2024 Bob Ray
  *
  * @author Bob Ray <https://bobsguides.com>
  * 5/11/11
