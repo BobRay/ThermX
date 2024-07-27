@@ -77,7 +77,7 @@ $mt = round($tHeight - $ht);
 $modx->regClientCSS($cssUrl);
 
 /* inject css for mercury */
-$src = '<style type="text/css">
+$src = '<style>
   .percent {margin-top: ' .
     $mt . 'px; height:' . $ht . 'px;}
 </style>';
