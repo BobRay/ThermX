@@ -38,12 +38,12 @@
 */
 
 
-
+/* @var $modx modX */
+/* @var $scriptProperties array */
 
 require_once $modx->getOption('tx.core_path', null, $modx->getOption('core_path') . 'components/thermx/') . 'classes/thermx.class.php';
 $cssUrl = $modx->getOption('tx.assets_url', null, $modx->getOption('assets_url') . 'components/thermx/') . 'css/thermx.css';
-//$src = MODX_CORE_PATH . 'components/thermx/classes/thermx.class.php';
-//require $src;
+
 
 $thermxConfig = $scriptProperties;
 
@@ -54,12 +54,10 @@ $thermxMax = isset($thermxConfig['thermxMax']) ? $thermxConfig['thermxMax'] : 12
 /* avoid division by zero */
 $thermxMax = $thermxMax = 0 ? 1 : $thermxMax;
 
-$thermxFormat = isset($thermxConfig['thermxFormat']) ? $thermxConfig['thermxFormat'] : '%(#10n';
-
 $thermxLocale = isset($thermxConfig['thermxLocale']) ? $thermxConfig['thermxLocale'] : 'en_US';
 
 $therm = new thermx($modx,$thermxProgress,
-    $thermxMax, $thermxFormat, $thermxLocale);
+    $thermxMax, $thermxLocale);
 
 $cur = $thermxProgress;
 $max = $thermxMax;

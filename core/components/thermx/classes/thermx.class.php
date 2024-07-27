@@ -41,40 +41,40 @@
      * @var array MODX instance passed in the constructor.
      * @access protected
      */
-    var $modx;
+     protected modX $modx;
 /**
      * @var int Current funds raised
      * @access protected
      */
 
-   var $thermxProgress;
+   protected int $thermxProgress;
 
 /**
      * @var int Fundraising goal
      * @access protected
      */
 
-   var $thermxMax;
+     protected int $thermxMax;
 /**
-     * @var string format string to be passed
-     * to money_format()
+     * @var string fundraising goal
      * @access protected
      */
    var $thermxFormat;
 
 /**
-     * @var string format string to be passed
-     * to set_locale()
+     * @var string country code for formatting
+     * money values; defaults to en_US
+     *
      * @access protected
      */
-   var $thermxLocale;
+      protected string $thermxLocale;
 
 
     /**
-     * PHP5 Constructor
+     *
      * @access public
-     * @param array $modx MODX object.
-     * @param int $prog current funds raised.
+     * @param  modX $modx MODX object.
+     * @param int $progress current funds raised.
      * @param int $max Fundraising goal.
      * @param string $format string to be passed to money_format()
      */
@@ -86,14 +86,15 @@
       }
 
    /**
-   * Formats money amount
    *
-   * @param string $format - format string for money_format()
-   * @param int $num - Dollar amount
+   * @param string $locale - country code for money formatting
+   * @param int $num - total amount raised so far
    *
-   * Note: Some systems do not have the money_format()
-   * function. For those systems, using the thermxFormat
-   * parameter will have no effect.
+   * @return string
+   * Note: The money format is determined by the
+   * current locale (set with the &thermxLocale property in the
+    * snippet tag, so be sure that is set correctly).
+   * The default is en_US
    */
 
     function my_money_format($format, $num) {
@@ -106,7 +107,8 @@
     }
 
 /**
-* prints amount currently raised
+* Returns string with amount currently raised
+* formatted for locale.
 * @access public
 */
 
@@ -115,8 +117,9 @@ function showProgress() {
 
 }
 /**
-* Displays Thermometer
+* Returns HTML for Thermometer
 * @access public
+* @return string
 */
 function showThermometer() {
     $current = $this->thermxProgress;
@@ -130,14 +133,6 @@ function showThermometer() {
     }
     $output .= "<div class='thermx-progressgraphics'>\n";
 
-    //$percent = round(($current/$max)*100);
-    //$percent = ($percent > 100) ? 100 : $percent;
-    //$percent = str_pad($this->roundnum($percent, 10), 2, "0", STR_PAD_LEFT);
-
-
-
-
-    //$output .= "    <div class='thermx-progressmercury percent$percent'>\n";
     $output .= "    <div class='thermx-progressmercury percent'>\n";
     $output .= "        <div class='thermx-progressmercurytop'></div>\n";
     $output .= "    </div>\n";
