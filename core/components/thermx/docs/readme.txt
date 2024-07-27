@@ -22,9 +22,6 @@ Parameters:
 
  &thermxProgress  -- Current amount raised
  &thermxMax       -- Fundraising goal
- &thermxFormat    -- [optional] format argument for
-                        money_format() function
-                        defauts to `%(#10n`.
  &thermxLocale    -- [optional] format argument for
                         set_locale() function.
                         defaults to 'en_US'

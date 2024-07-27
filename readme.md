@@ -7,8 +7,7 @@ ThermX Fundraising Thermometer Snippet
   
 **Bugs and requests:** [GitHub](https://github.com/BobRay/ThermX/issues)
   
-**Questions about using Thermx** [MODX Forums](https://forums.modx.com)
+**Questions about using Thermx** [MODX Forums](https://community.modx.com)
 
 This snippet for MODX Revolution displays a fundraising thermometer and a
 text display of the amount raised so far. When the campaign reaches a specified goal, the thermometer is shown with the mercury bursting out of the top.
-

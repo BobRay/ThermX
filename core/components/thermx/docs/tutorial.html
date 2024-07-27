@@ -1,6 +1,13 @@
 <p>
-This snippet is for use with MODX Revolution. ThermX creates a fundraising thermometer for placement on a web page. </p>
+This snippet is for use with MODX Revolution. ThermX creates a fundraising thermometer for placement on a web page.</p>
 
+<div class="box">
+  <h4>Update note</h4>
+  <p>The method for formatting the money amount has changed in the
+     latest version, due to the deprecation of PHP's <code>money_format()</code> function. The <code>&thermxFormat</code> property is gone.</p>
+
+    <p>Use the <code>&thermxLocale</code> property if you want something other than the default locale, which is <code>en_US</code>.</p>
+</div>
 
 <h3>Minimal Snippet Tag</h3>
 
@@ -14,12 +21,7 @@ This snippet is for use with MODX Revolution. ThermX creates a fundraising therm
 
 &thermxMax       -- Fundraising goal
 
-&thermxFormat    -- [optional] format argument for
-                    money_format() function
-                    defauts to `%(#10n`.
-
-&thermxLocale    -- [optional] format argument for
-                    set_locale() function.
+&thermxLocale    -- [optional] locale for money format
                     defaults to 'en_US'
 </fixedpre></pre>
 

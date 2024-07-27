@@ -1,8 +1,16 @@
 Changelog for ThermX
 
+ThermX 3.3.0
+------------
+ - Updates for MODX 3 and PHP 8
+ - Refactor money format process (see docs)
+ - Always install sample page on initial installation
+ - Minor internal updates
+ - Update Copyrights
+
 ThermX 3.1.0
 ------------
-Transparent background on images (Thanks, Mark H.)
+ - Transparent background on images (Thanks, Mark H.)
 
 ThermX 3.0.4
 ------------
@@ -19,5 +27,4 @@ ThermX 3.0.3
 
 ThermX 3.0.2
 -----------------
-
 - Initial release
