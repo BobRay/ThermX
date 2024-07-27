@@ -59,8 +59,6 @@
      * @var string fundraising goal
      * @access protected
      */
-   var $thermxFormat;
-
 /**
      * @var string country code for formatting
      * money values; defaults to en_US
@@ -76,13 +74,13 @@
      * @param  modX $modx MODX object.
      * @param int $progress current funds raised.
      * @param int $max Fundraising goal.
-     * @param string $format string to be passed to money_format()
+     * @param string $locale country code for money formatting
+     *
      */
-      function __construct($modx, $prog, $max, $format = '%(#10n' , $locale = 'en_US') {
-          $this->thermxProgress = $prog;
+      function __construct($modx, $progress, $max, $locale = 'en_US') {
+          $this->thermxProgress = $progress;
           $this->thermxMax = $max;
-          $this->thermxFormat = $format;
-          $this->thermxLocal = $locale;
+          $this->thermxLocale = $locale;
       }
 
    /**
@@ -97,13 +95,10 @@
    * The default is en_US
    */
 
-    function my_money_format($format, $num) {
-        if (function_exists('money_format')) {
-            setlocale(LC_MONETARY, $this->thermxLocale);
-            return (money_format($format,$num));
-        } else {
-            return "$" . number_format($num, 2);
-        }
+    protected function my_money_format($locale, $num): string {
+        $formatter = new NumberFormatter($locale, NumberFormatter::CURRENCY);
+
+        return $formatter->format($num);
     }
 
 /**
@@ -113,7 +108,7 @@
 */
 
 function showProgress() {
-    return $this->my_money_format ($this->thermxFormat,$this->thermxProgress);
+    return $this->my_money_format ($this->thermxLocale,$this->thermxProgress);
 
 }
 /**
@@ -139,7 +134,7 @@ function showThermometer() {
     $output .= "</div>\n";
     $output .= "<div class='thermx-progressnumbers'>\n";
     for ( $counter = $this->thermxMax; $counter >= 0;$counter=$counter-($this->thermxMax/10)    ) {
-        $output .= "<div class='thermx-progressvalue'>".$this->my_money_format ($this->thermxFormat,$counter)."</div>\n";
+        $output .= "<div class='thermx-progressvalue'>".$this->my_money_format ($this->thermxLocale,$counter)."</div>\n";
 
     }
     $output .= "</div>\n";

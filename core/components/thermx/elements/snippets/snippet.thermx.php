@@ -22,8 +22,6 @@
 
  @property thermxProgress  -- Current amount raised
  @property thermxMax       -- Fundraising goal
- @property thermxFormat    -- [optional] format argument for money_format()
-                     defauts to `%(#10n`.
  @property thermxLocale    -- [optional] arg for set_locale
                      defaults to  'en_US'.
 
