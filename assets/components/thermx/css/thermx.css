@@ -14,16 +14,16 @@
 
 .thermx-progressgraphics {
 	width: 13px;
-	padding: 48px 0px 0px 42px;
+	padding: 48px 0 0 42px;
 	float: left;
 
 }
 .thermx-progressmercury {
-    position:absolute;
+  /*  position:absolute; */
 	background-image: url(../images/mercury.jpg);
     background-repeat: repeat-y;
-    margin-bottom:0px;
-    padding-bottom:0px;
+    margin-bottom:0;
+    padding-bottom:0;
 
 }
 .thermx-progressmercurytop {
@@ -34,7 +34,7 @@
 }
 .thermx-progressnumbers {
 	float: right;
-	margin: 25px 10px 0px 0px;
+	margin: 25px 10px 0 0;
 	font-size: 10px;
 	color: #123456;
 	text-align: right;
@@ -45,8 +45,6 @@
 }
 .thermx-progressvalue {
 	border-top: solid 1px #cccccc;
-	margin: 25px 0px 0px 0px;
+	margin: 25px 0 0 0;
 
 }
-
-/* div.percent {margin-top: xmtpx; height: xhtpx;} */
