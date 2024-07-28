@@ -32,7 +32,7 @@ $sources= array (
 unset($root);
 
 $package_name = 'thermx';
-$package_version = '3.1.0';
+$package_version = '3.3.0';
 $package_release = 'pl';
 
 $packageNamespace = 'thermx';
